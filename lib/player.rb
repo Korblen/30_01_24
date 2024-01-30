@@ -29,6 +29,24 @@ class Joueur
     end
 end
 
+class HumanPlayer < Joueur
+    attr_accessor :weapon_level
+  
+    def initialize(name)
+      super(name) # Appel du constructeur de la classe parente (Joueur)
+      @life_points = 100
+      @weapon_level = 1
+    end
+
+    def showstate
+        "#{name} a #{life_points} points de vie et un niveau d'arme de #{weapon_level}"
+    end
+    
+    def compute_damage
+        rand(1..6) * @weapon_level
+    end
+end
+
 binding.pry
 
 
