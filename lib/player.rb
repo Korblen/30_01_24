@@ -81,6 +81,4 @@ class HumanPlayer < Joueur
 
 end
 
-binding.pry
-
 
